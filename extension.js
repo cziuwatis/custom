@@ -69,7 +69,7 @@
         startupVolume: 40, // 0-100 (koks volume kai startuojas botas)
         startupEmoji: true, // true or false
         autowoot: true,
-        autoskip: false,
+        autoskip: true,
         smartSkip: true,
         cmdDeletion: true,
         maximumAfk: 120,
