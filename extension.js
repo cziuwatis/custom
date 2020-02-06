@@ -60,7 +60,7 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: 'basicBot ltu-koleee edition',
+        botName: 'Vergas',
         language: 'lithuanian',
         chatLink: 'https://rawgit.com/basicBot/source/master/lang/lt.json',
         scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
