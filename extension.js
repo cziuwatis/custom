@@ -95,12 +95,12 @@
         thorCooldown: 10,
         skipPosition: 3,
         skipReasons: [
-            ['theme', 'ne pagal tema daina wtf zmones '],
-            ['op', 'sita daina ant kazkokio OP(overplayed) listo. '],
-            ['history', 'Sita daina jau grojo haha '],
-            ['mix', 'Mixu grot negalima iseina'],
-            ['sound', 'Blogas sound quality brah (arba ner vapse soundo :D :D) '],
-            ['nsfw', 'Kazkokia pornografija cia (NSFW)'],
+            ['theme', 'ne pagal temą daina, wtf žmonės'],
+            ['op', 'šita daina ant kažkokio OP(overplayed) listo'],
+            ['history', 'šita daina jau grojo haha'],
+            ['mix', 'mixų grot negalima išeina'],
+            ['sound', 'blogas sound quality brah (arba nėr vapše soundo :D :D'],
+            ['nsfw', 'Kažkokia pornografija čia (NSFW)'],
             ['unavailable', 'Daina neprieinama vartotojams ;( ']
         ],
         afkpositionCheck: 15,
