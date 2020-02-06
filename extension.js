@@ -105,7 +105,7 @@
         website: null,
         intervalMessages: ["tomas lopas", "Romualdai labas"],
         messageInterval: 15,
-        songstats: true,
+        songstats: false,
         commandLiteral: '!',
         blacklists: {
             NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
