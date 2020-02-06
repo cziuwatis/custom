@@ -1,7 +1,7 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "basicBot";
+    var fork = "cziuwatis";
 
     // Define our function responsible for extending the bot.
     function extend() {
@@ -46,8 +46,8 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: 'basicBot',
-        language: 'english',
+        botName: 'basicBot ltu-koleee edition',
+        language: 'lithuanian',
         chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
         scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
         roomLock: false, // Requires an extension to re-load the script
@@ -59,43 +59,43 @@
         smartSkip: true,
         cmdDeletion: true,
         maximumAfk: 120,
-        afkRemoval: true,
-        maximumDc: 60,
+        afkRemoval: false,
+        maximumDc: 10,
         bouncerPlus: true,
-        blacklistEnabled: true,
+        blacklistEnabled: false,
         lockdownEnabled: false,
         lockGuard: false,
         maximumLocktime: 10,
-        cycleGuard: true,
+        cycleGuard: false,
         maximumCycletime: 10,
         voteSkip: false,
         voteSkipLimit: 10,
-        historySkip: false,
+        historySkip: true,
         timeGuard: true,
         strictTimeGuard: true,
-        maximumSongLength: 10,
+        maximumSongLength: 8,
         autodisable: false,
-        commandCooldown: 30,
+        commandCooldown: 10,
         usercommandsEnabled: true,
         thorCommand: false,
         thorCooldown: 10,
         skipPosition: 3,
         skipReasons: [
-            ['theme', 'This song does not fit the room theme. '],
-            ['op', 'This song is on the OP list. '],
-            ['history', 'This song is in the history. '],
-            ['mix', 'You played a mix, which is against the rules. '],
-            ['sound', 'The song you played had bad sound quality or no sound. '],
-            ['nsfw', 'The song you contained was NSFW (image or sound). '],
-            ['unavailable', 'The song you played was not available for some users. ']
+            ['theme', 'ne pagal tema daina wtf zmones '],
+            ['op', 'sita daina ant kazkokio OP(overplayed) listo. '],
+            ['history', 'Sita daina jau grojo haha '],
+            ['mix', 'Mixu grot negalima iseina'],
+            ['sound', 'Blogas sound quality brah (arba ner vapse soundo :D :D) '],
+            ['nsfw', 'Kazkokia pornografija cia (NSFW)'],
+            ['unavailable', 'Daina neprieinama vartotojams ;( ']
         ],
         afkpositionCheck: 15,
-        afkRankCheck: 'ambassador',
+        afkRankCheck: 'user',
         motdEnabled: false,
         motdInterval: 5,
         motd: 'Temporary Message of the Day',
-        filterChat: true,
-        etaRestriction: false,
+        filterChat: false,
+        etaRestriction: true,
         welcome: true,
         opLink: null,
         rulesLink: null,
@@ -103,8 +103,8 @@
         fbLink: null,
         youtubeLink: null,
         website: null,
-        intervalMessages: [],
-        messageInterval: 5,
+        intervalMessages: ["tomas lopas", "Romualdai labas"],
+        messageInterval: 15,
         songstats: true,
         commandLiteral: '!',
         blacklists: {
