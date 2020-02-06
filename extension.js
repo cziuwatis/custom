@@ -46,7 +46,8 @@
             if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
             if (!bot.commands.executable(this.rank, chat)) return void (0);
             else {
-              API.sendChat("/me Tomas karalius ir kunigas duoda jums jo palaima");
+              API.sendChat("/me Tomas karalius ir kunigas duoda jums jo palaima.https://tenor.com/view/wwe-bobby-roode-gif-10013381");
+              //API.sendChat("https://tenor.com/view/wwe-bobby-roode-gif-10013381");
             }
           }
         };
@@ -61,7 +62,7 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: 'basicBot ltu-koleee edition',
         language: 'lithuanian',
-        chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
+        chatLink: 'https://rawgit.com/basicBot/source/master/lang/lt.json',
         scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
         roomLock: false, // Requires an extension to re-load the script
         startupCap: 200, // 1-200 (kiek avataru matos kai startuojas)
