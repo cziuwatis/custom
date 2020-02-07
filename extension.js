@@ -46,7 +46,7 @@
             if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
             if (!bot.commands.executable(this.rank, chat)) return void (0);
             else {
-              API.sendChat("/me Tomas kunigas duoda jums jo palaima.https://tenor.com/view/wwe-bobby-roode-gif-10013381");
+              API.sendChat("/me Tomas kunigas duoda jums jo palaima.https://media1.tenor.com/images/d101c34e5573221e6c0ef2a2ee9d7c01/tenor.gif");
               //API.sendChat("https://tenor.com/view/wwe-bobby-roode-gif-10013381");
             }
           }
