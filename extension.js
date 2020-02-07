@@ -117,7 +117,7 @@
         fbLink: null,
         youtubeLink: null,
         website: null,
-        intervalMessages: ["Tomas labas", "Romualdai labas"],
+        intervalMessages: [],
         messageInterval: 15,
         songstats: false,
         commandLiteral: '!',
