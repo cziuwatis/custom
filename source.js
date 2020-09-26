@@ -380,25 +380,32 @@
                     basicBot.room.roulette.rouletteStatus = true;
                     basicBot.room.roulette.countdown = setTimeout(function() {
                         basicBot.room.roulette.endRoulette();
-                    }, 5 * 1000);
+                    }, 60 * 1000);
                     API.sendChat(basicBot.chat.isopen);
                 },
                 endRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = false;
                     basicBot.room.roulette.rouletteLastTime = new Date();
-                    var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
-                    var winner = basicBot.room.roulette.participants[ind];
-                    basicBot.room.roulette.participants = [];
-                    var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
-                    var user = basicBot.userUtilities.lookupUser(winner);
-                    var name = user.username;
-                    API.sendChat(subChat(basicBot.chat.winnerpicked, {
-                        name: name,
-                        position: pos
-                    }));
-                    setTimeout(function(winner, pos) {
-                        basicBot.userUtilities.moveUser(winner, pos, false);
-                    }, 1 * 1000, winner, pos);
+                    if (basicBot.room.roulette.participants.length < 3)
+                    {
+                     API.sendChat("/me Nepakankamai zaideju prisijunge prie ruletes (MIN 3) :(");
+                    }
+                    else 
+                    {
+                      var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
+                      var winner = basicBot.room.roulette.participants[ind];
+                      basicBot.room.roulette.participants = [];
+                      var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
+                      var user = basicBot.userUtilities.lookupUser(winner);
+                      var name = user.username;
+                      API.sendChat(subChat(basicBot.chat.winnerpicked, {
+                          name: name,
+                          position: pos
+                      }));
+                      setTimeout(function(winner, pos) {
+                          basicBot.userUtilities.moveUser(winner, pos, false);
+                      }, 1 * 1000, winner, pos);
+                    }
                 }
             },
             usersUsedThor: []
