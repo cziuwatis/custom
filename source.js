@@ -384,7 +384,7 @@
                     basicBot.room.roulette.rouletteStatus = true;
                     basicBot.room.roulette.countdown = setTimeout(function() {
                         basicBot.room.roulette.endRoulette();
-                    }, 60 * 1000);
+                    }, 5 * 1000);
                     API.sendChat(basicBot.chat.isopen);
                 },
                 endRoulette: function() {
@@ -3321,7 +3321,8 @@
                              basicBot.room.roulette.startRoulette();
                             }
                             else {
-                             API.sendChat("testinu suda labas");
+                             API.sendChat("/me testinu suda labas");
+                            }
                         }
                     }
                 }
