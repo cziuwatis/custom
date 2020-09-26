@@ -323,7 +323,8 @@
                 NSFW: 'https://raw.githack.com/basicBot/custom/master/blacklists/NSFWlist.json',
                 OP: 'https://raw.githack.com/basicBot/custom/master/blacklists/OPlist.json',
                 BANNED: 'https://raw.githack.com/basicBot/custom/master/blacklists/BANNEDlist.json'
-            }
+            },
+            rouletteCooldown: 900 //seconds for roulette to be on cooldown
         },
         room: {
             name: null,
@@ -376,6 +377,7 @@
             newBlacklistedSongFunction: null,
             roulette: {
                 rouletteStatus: false,
+                rouletteLastTime: null,
                 participants: [],
                 countdown: null,
                 startRoulette: function() {
@@ -387,6 +389,7 @@
                 },
                 endRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = false;
+                    basicBot.room.roulette.rouletteLastTime = new Date();
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
@@ -3313,7 +3316,12 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         if (!basicBot.room.roulette.rouletteStatus) {
-                            basicBot.room.roulette.startRoulette();
+                            if (!basicBot.room.roulette.rouletteLastRun && new Date().getTime() - basicBot.room.roulette.rouletteLastRun.getTime() > basicBot.settings.rouletteCooldown)
+                            {
+                             basicBot.room.roulette.startRoulette();
+                            }
+                            else {
+                             API.sendChat("testinu suda labas");
                         }
                     }
                 }
