@@ -319,7 +319,8 @@
                 NSFW: 'https://raw.githack.com/basicBot/custom/master/blacklists/NSFWlist.json',
                 OP: 'https://raw.githack.com/basicBot/custom/master/blacklists/OPlist.json',
                 BANNED: 'https://raw.githack.com/basicBot/custom/master/blacklists/BANNEDlist.json'
-            }
+            },
+           rouletteCooldown: 900 //roulette cooldown
         },
         room: {
             name: null,
