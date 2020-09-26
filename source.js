@@ -3308,7 +3308,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         if (!basicBot.room.roulette.rouletteStatus) {
-                            if (!basicBot.room.roulette.rouletteLastTime && new Date().getTime() - basicBot.room.roulette.rouletteLastTime.getTime() > basicBot.settings.rouletteCooldown)
+                            if (basicBot.room.roulette.rouletteLastTime != null && ((new Date()).getTime() - basicBot.room.roulette.rouletteLastTime.getTime() > basicBot.settings.rouletteCooldown))
                             {
                              basicBot.room.roulette.startRoulette();
                             }
