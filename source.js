@@ -3313,7 +3313,7 @@
                              basicBot.room.roulette.startRoulette();
                             }
                             else {
-                             API.sendChat("/me [ROULETTE] Nepraejo dar " + basicBot.settings.rouletteCooldown + " sec nuo praeito karto. Liko " + (Math.round((currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime())/ 1000)) + "s");
+                             API.sendChat("/me [ROULETTE] Nepraejo dar " + basicBot.settings.rouletteCooldown + " sec nuo praeito karto. Liko " + (basicBot.settings.rouletteCooldown - Math.round((currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime())/ 1000)) + "s");
                            }
                         }
                     }
