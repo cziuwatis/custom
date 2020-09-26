@@ -319,8 +319,7 @@
                 NSFW: 'https://raw.githack.com/basicBot/custom/master/blacklists/NSFWlist.json',
                 OP: 'https://raw.githack.com/basicBot/custom/master/blacklists/OPlist.json',
                 BANNED: 'https://raw.githack.com/basicBot/custom/master/blacklists/BANNEDlist.json'
-            },
-            rouletteCooldown: 900 //seconds for roulette to be on cooldown
+            }
         },
         room: {
             name: null,
@@ -3308,13 +3307,14 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         if (!basicBot.room.roulette.rouletteStatus) {
-                            if (basicBot.room.roulette.rouletteLastTime != null && ((new Date()).getTime() - basicBot.room.roulette.rouletteLastTime.getTime() > basicBot.settings.rouletteCooldown))
+                            var currentTime = new Date();
+                            if (basicBot.room.roulette.rouletteLastTime === null || (currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime() > basicBot.settings.rouletteCooldown))
                             {
                              basicBot.room.roulette.startRoulette();
                             }
                             else {
-                             API.sendChat("/me testinu suda labas");
-                            }
+                             API.sendChat("/me [ROULETTE] Nepraejo dar " + basicBot.settings.rouletteCooldown + " sec nuo praeito karto. Liko " + (Math.round((currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime())/ 1000)) + "s");
+                           }
                         }
                     }
                 }
