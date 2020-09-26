@@ -388,7 +388,7 @@
                     basicBot.room.roulette.rouletteLastTime = new Date();
                     if (basicBot.room.roulette.participants.length < 3)
                     {
-                     API.sendChat("/me Nepakankamai zaideju prisijunge prie ruletes (MIN 3) :(");
+                     API.sendChat("/me Nepakankamai žaidėjų prisijungė prie ruletės (MIN 3) :(");
                     }
                     else 
                     {
@@ -3316,12 +3316,15 @@
                     else {
                         if (!basicBot.room.roulette.rouletteStatus) {
                             var currentTime = new Date();
-                            if (basicBot.room.roulette.rouletteLastTime === null || (currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime() > basicBot.settings.rouletteCooldown))
+                            if (basicBot.room.roulette.rouletteLastTime === null || (currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime() > basicBot.settings.rouletteCooldown * 1000))
                             {
+                             console.log(basicBot.room.roulette.rouletteLastTime.getTime());
+                             console.log(currentTime.getTime());
+                             console.log(currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime());
                              basicBot.room.roulette.startRoulette();
                             }
                             else {
-                             API.sendChat("/me [ROULETTE] Nepraejo dar " + basicBot.settings.rouletteCooldown + " sec nuo praeito karto. Liko " + (basicBot.settings.rouletteCooldown - Math.round((currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime())/ 1000)) + "s");
+                             API.sendChat("/me [ROULETTE] Nepraėjo dar " + basicBot.settings.rouletteCooldown + " sec nuo praeito karto. Liko " + (basicBot.settings.rouletteCooldown - Math.round((currentTime.getTime() - basicBot.room.roulette.rouletteLastTime.getTime())/ 1000)) + "s");
                            }
                         }
                     }
