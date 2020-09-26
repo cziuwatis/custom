@@ -129,6 +129,6 @@
     }));
 
     // Start the bot and extend it when it has loaded.
-    $.getScript("https://raw.githubusercontent.com/cziuwatis/custom/master/source.js", extend);
+    $.getScript("https://raw.githack.com/cziuwatis/custom/master/source.js", extend);
 
 }).call(this);
